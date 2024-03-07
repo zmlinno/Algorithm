@@ -65,23 +65,24 @@ void Test04()
 }
 
 
-//void Test05()
-//{
-//    SListNode *plist = NULL;
-//    SListPushBack(&plist, 1);
-//    SListPushBack(&plist, 2);
-//    SListPushBack(&plist, 3);
-//    SListPushBack(&plist, 4);
-//   // SListPrint(plist);
-//    
-//    
-//    SListFind(&plist, 1);
-//   // SLTErase(&plist, pos);
-//    SListPrint(plist);
+void Test05()
+{
+    SListNode *plist = NULL;
+    SListPushBack(&plist, 1);
+    SListPushBack(&plist, 2);
+    SListPushBack(&plist, 3);
+    SListPushBack(&plist, 4);
+    SListPrint(plist);
+    
+    
+    SListNode *pos = SListFind(plist, 1);
+   // SListFind(&plist, 1);
+    SLTErase(&plist, pos);
+    SListPrint(plist);
 
-//    pos = SListFind(plist, 3);
-//    SLTErase(&plist, pos);
-//    SLTPrint(plist);
+    pos = SListFind(plist, 3);
+    SLTErase(&plist, pos);
+    SListPrint(plist);
     
 }
 int main()
