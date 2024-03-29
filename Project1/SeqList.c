@@ -4,7 +4,7 @@ void SLInit(SL* psl)
 {
 	assert(psl);
 	
-	//Ê×ÏÈÔÚÕâÀïÉèÖÃºÃ³õÊ¼»¯
+	//é¦–å…ˆåœ¨è¿™é‡Œè®¾ç½®å¥½åˆå§‹åŒ–
 	psl->a = NULL;
 	psl->size = 0;
 	psl->capacity = 0;
@@ -35,7 +35,7 @@ void SLPrint(SL* psl)
 
 void SLCheckCapacity(SL* psl)
 {
-	//¼ì²é¿Õ¼äºÍÈİÁ¿Ê¹ÓÃÇé¿ö
+	//æ£€æŸ¥ç©ºé—´å’Œå®¹é‡ä½¿ç”¨æƒ…å†µ
 	assert(psl);
 	if (psl->size == psl->capacity)
 	{
@@ -55,7 +55,7 @@ void SLCheckCapacity(SL* psl)
 
 
 
-//Õâ¸öÊÇÖ±½Ó²åÈëÊı¾İ
+//è¿™ä¸ªæ˜¯ç›´æ¥æ’å…¥æ•°æ®
 void SLPushBack(SL* psl, SLDataType x)
 {
 	assert(psl);
@@ -70,7 +70,7 @@ void SLPushFront(SL* psl, SLDataType x)
 	assert(psl);
 	SLCheckCapacity(psl);
 
-	//ÔÚÕâÀïÅ²¶¯Êı¾İ
+	//åœ¨è¿™é‡ŒæŒªåŠ¨æ•°æ®
 	int end = psl->size - 1;
 	while (end >= 0)
 	{
@@ -117,9 +117,9 @@ void SLInsert(SL* psl, int pos,SLDataType x)
 
 	SLCheckCapacity(psl);
 
-	//Å²¶¯Êı¾İ
+	//æŒªåŠ¨æ•°æ®
 	int end = psl->size - 1;
-	while (end <= pos)
+	while (end ï¼= pos)
 	{
 		psl->a[end + 1] = psl->a[end];
 		--end;
@@ -136,7 +136,7 @@ void SLErase(SL* psl, int pos)
 	assert(psl);
 	assert(pos >= 0 && pos < psl->size);
 
-	//Êı¾İ¸²¸Ç
+	//æ•°æ®è¦†ç›–
 	int begin = pos + 1;
 	while (begin < psl->size)
 	{
